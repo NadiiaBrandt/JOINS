@@ -56,8 +56,13 @@ CROSS JOIN
 	HumanResources.Employee 
 GO
 
-SELECT COUNT(*)
-FROM (SELECT FirstName +' '+ LastName AS FullName, JobTitle
-FROM Person.Person
-CROSS JOIN HumanResources.Employee ) R
+SELECT 
+	COUNT(*)
+FROM
+	(SELECT
+		FirstName +' '+ LastName AS FullName, JobTitle
+	FROM 
+		Person.Person
+	CROSS JOIN
+		HumanResources.Employee ) R
 GO 
